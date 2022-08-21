@@ -18,4 +18,10 @@ return require('packer').startup(function()
     end
   }
   use("ThePrimeagen/git-worktree.nvim")
+  use("othree/html5.vim")
+  use("pangloss/vim-javascript")
+  use{
+    "evanleck/vim-svelte",
+    branch = "main"
+  }
 end)
