@@ -25,4 +25,5 @@ return require('packer').startup(function()
     branch = "main"
   }
   use("github/copilot.vim")
+  use("tpope/vim-fugitive")
 end)
