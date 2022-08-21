@@ -24,4 +24,5 @@ return require('packer').startup(function()
     "evanleck/vim-svelte",
     branch = "main"
   }
+  use("github/copilot.vim")
 end)
