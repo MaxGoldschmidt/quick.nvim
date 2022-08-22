@@ -1,4 +1,4 @@
 {
-  "coc.preferences.formatOnSaveFiletypes": ["lua", "svelte"],
-  "svelte.enable-ts-plugin": true
+  "coc.preferences.formatOnSaveFiletypes": ["lua", "svelte", "tsx", "js"],
+  "tsserver.enableJavascript": true
 }
