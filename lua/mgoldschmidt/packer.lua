@@ -2,7 +2,9 @@ return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
   use {'neoclide/coc.nvim', branch = 'release'}
   use 'folke/tokyonight.nvim'
-  use 'nvim-treesitter/nvim-treesitter' 
+  use("nvim-treesitter/nvim-treesitter", {
+    run = ":TSUpdate"
+  })
   use 'tpope/vim-commentary'
   use 'JoosepAlviste/nvim-ts-context-commentstring'
   use 'lukas-reineke/indent-blankline.nvim'
@@ -26,4 +28,5 @@ return require('packer').startup(function()
   }
   use("github/copilot.vim")
   use("tpope/vim-fugitive")
+  use("mfussenegger/nvim-dap")
 end)
