@@ -1,5 +1,5 @@
 vim.g.mapleader = " "
-vim.o.number  =true
+vim.o.number  = true
 vim.o.relativenumber = true
 vim.o.wrap = false
 vim.o.expandtab = true
@@ -15,10 +15,10 @@ vim.o.scrolloff = 3
 vim.o.errorbells = false
 vim.o.shiftwidth = 2
 vim.o.numberwidth = 4
-vim.o.termguicolors = true
+-- vim.o.termguicolors = true
 vim.o.colorcolumn = '80'
 vim.o.showmode = false
-vim.o.showtabline = 2
+-- vim.o.showtabline = 2
 vim.o.signcolumn = 'yes'
 vim.o.mouse = 'a'
 
