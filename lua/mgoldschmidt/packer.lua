@@ -29,6 +29,7 @@ return require('packer').startup(function()
   use("github/copilot.vim")
   use("tpope/vim-fugitive")
   use("mfussenegger/nvim-dap")
+<<<<<<< HEAD
   use {
     'kyazdani42/nvim-tree.lua',
     requires = {
@@ -37,4 +38,14 @@ return require('packer').startup(function()
     tag = 'nightly' -- optional, updated every week. (see issue #1193)
   }
   use("David-Kunz/jester")
+=======
+  use("ryanoasis/vim-devicons")
+  use {
+    'kyazdani42/nvim-tree.lua',
+    requires = {
+      'kyazdani42/nvim-web-devicons', -- optional, for file icons
+    },
+    tag = 'nightly' -- optional, updated every week. (see issue #1193)
+  }
+>>>>>>> fe55b6f (changes)
 end)
