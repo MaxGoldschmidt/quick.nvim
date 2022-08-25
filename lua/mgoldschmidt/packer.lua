@@ -1,3 +1,4 @@
+---@diagnostic disable-next-line: different-requires
 return require("packer").startup(function()
   use "wbthomason/packer.nvim"
   use {"neoclide/coc.nvim", branch = "release"}
