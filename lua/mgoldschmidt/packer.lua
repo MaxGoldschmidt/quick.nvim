@@ -13,6 +13,7 @@ return require('packer').startup(function()
     requires = { {'nvim-lua/plenary.nvim'} }
   }
   use { "nvim-telescope/telescope-file-browser.nvim" }
+  use { "nvim-telescope/telescope-fzy-native.nvim" }
   use {
     "ur4ltz/surround.nvim",
     config = function()

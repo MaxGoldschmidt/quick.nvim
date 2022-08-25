@@ -10,11 +10,19 @@ telescope.setup{
 		file_previewer = previewers.vim_buffer_cat.new,
 		grep_previewer = previewers.vim_buffer_vimgrep.new,
 		qflist_previewer = previewers.vim_buffer_qflist.new,
+    file_ignore_patterns = { "node_modules" }
+  },
+  extensions = {
+    fzy_native = {
+      override_generic_sorter = false,
+      override_file_sorter = true
+    }
   }
 }
 
 telescope.load_extension("file_browser")
 telescope.load_extension("git_worktree")
+telescope.load_extension('fzy_native')
 
 
 vim.api.nvim_set_keymap('n', '<C-P>', "<cmd>lua require('telescope.builtin').find_files()<CR>", { noremap = true })
