@@ -14,6 +14,7 @@ nnoremap("to", ":tabo<CR>")
 nnoremap("<C-S>", ":%s/")
 nnoremap("<leader>t", ":sp<CR> :term<CR> :resize 20N<CR> i", silent)
 nnoremap("<leader>pv", ":NvimTreeToggle<CR>", silent)
+vim.api.nvim_set_keymap("t", "<Esc>", "<C-\\><C-n>", {noremap = true, silent = true})
 
 -- jester
 nnoremap("<leader>te", ":lua require'jester'.run()<CR>", silent)
