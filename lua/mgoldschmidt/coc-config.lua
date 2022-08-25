@@ -10,3 +10,14 @@ vim.o.hidden = true
 vim.o.backup = false
 vim.o.writebackup = false
 vim.o.updatetime = 300
+
+-- Global coc extensions
+vim.g.global_coc_extensions = {
+  'coc-json',
+  'coc-prettier',
+  'coc-lua',
+  'coc-json',
+  'coc-git',
+  'coc-eslint',
+  'coc-tsserver'
+}

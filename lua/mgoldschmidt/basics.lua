@@ -41,3 +41,4 @@ vim.cmd([[
   endfunction
 ]])
 
+require("lualine").setup()
