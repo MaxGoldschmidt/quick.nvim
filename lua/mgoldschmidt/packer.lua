@@ -37,7 +37,6 @@ return require("packer").startup(function()
     },
     tag = "nightly" -- optional, updated every week. (see issue #1193)
   }
-  use("David-Kunz/jester")
   use("ThePrimeagen/harpoon")
   use { "catppuccin/nvim", as = "catppuccin" }
   use { "sindrets/diffview.nvim", requires = "nvim-lua/plenary.nvim" }
@@ -78,5 +77,21 @@ return require("packer").startup(function()
       { 'L3MON4D3/LuaSnip' },
       { 'rafamadriz/friendly-snippets' },
     }
+  }
+  use {
+    "nvim-neotest/neotest",
+    requires = {
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+      "antoinemadec/FixCursorHold.nvim",
+      "nvim-neotest/neotest-python",
+      "nvim-neotest/neotest-plenary",
+      "nvim-neotest/neotest-go",
+      "haydenmeade/neotest-jest",
+      "nvim-neotest/neotest-vim-test",
+    },
+  }
+  use {
+    "folke/which-key.nvim",
   }
 end)

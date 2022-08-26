@@ -10,7 +10,7 @@ telescope.setup {
     file_previewer = previewers.vim_buffer_cat.new,
     grep_previewer = previewers.vim_buffer_vimgrep.new,
     qflist_previewer = previewers.vim_buffer_qflist.new,
-    file_ignore_patterns = { "node_modules", ".yarn", ".git" }
+    file_ignore_patterns = { "node_modules", ".yarn", ".git", "coverage", "test_results" }
   },
   extensions = {
     fzy_native = {

@@ -16,14 +16,8 @@ nnoremap("<leader>t", ":sp<CR> :term<CR> :resize 20N<CR> i", silent)
 nnoremap("<leader>pv", ":NvimTreeToggle<CR>", silent)
 vim.api.nvim_set_keymap("t", "<Esc>", "<C-\\><C-n>", { noremap = true, silent = true })
 
--- jester
-nnoremap("<leader>te", ":lua require'jester'.run()<CR>", silent)
-nnoremap("<leader>de", ":lua require'jester'.debug()<CR>", silent)
-nnoremap("<leader>br", ":lua require'dap'.toggle_breakpoint()<CR>", silent)
-nnoremap("<leader>co", ":lua require'dap'.continue()<CR>", silent)
-nnoremap("<leader>so", ":lua require'dap'.step_over()<CR>", silent)
-nnoremap("<leader>si", ":lua require'dap'.step_into()<CR>", silent)
-nnoremap("<leader>in", ":lua require'dap'.repl.open()<CR>", silent)
+-- testing
+nnoremap("<leader>te", ":lua require('neotest').run.run()<CR>", silent)
 
 -- harpoon
 nnoremap("<leader>a", function() require("harpoon.mark").add_file() end, silent)
