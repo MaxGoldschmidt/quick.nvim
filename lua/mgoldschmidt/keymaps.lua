@@ -14,7 +14,7 @@ nnoremap("to", ":tabo<CR>")
 nnoremap("<C-S>", ":%s/")
 nnoremap("<leader>t", ":sp<CR> :term<CR> :resize 20N<CR> i", silent)
 nnoremap("<leader>pv", ":NvimTreeToggle<CR>", silent)
-vim.api.nvim_set_keymap("t", "<Esc>", "<C-\\><C-n>", {noremap = true, silent = true})
+vim.api.nvim_set_keymap("t", "<Esc>", "<C-\\><C-n>", { noremap = true, silent = true })
 
 -- jester
 nnoremap("<leader>te", ":lua require'jester'.run()<CR>", silent)
@@ -33,3 +33,6 @@ nnoremap("<C-j>", function() require("harpoon.ui").nav_file(1) end, silent)
 nnoremap("<C-k>", function() require("harpoon.ui").nav_file(2) end, silent)
 nnoremap("<C-l>", function() require("harpoon.ui").nav_file(3) end, silent)
 nnoremap("<C-;>", function() require("harpoon.ui").nav_file(4) end, silent)
+
+-- lsp
+nnoremap("<leader>f", ":LspZeroFormat<CR>", silent)

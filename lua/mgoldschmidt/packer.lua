@@ -1,7 +1,6 @@
 ---@diagnostic disable-next-line: different-requires
 return require("packer").startup(function()
   use "wbthomason/packer.nvim"
-  use {"neoclide/coc.nvim", branch = "release"}
   use "folke/tokyonight.nvim"
   use("nvim-treesitter/nvim-treesitter", {
     run = ":TSUpdate"
@@ -11,20 +10,20 @@ return require("packer").startup(function()
   use "lukas-reineke/indent-blankline.nvim"
   use {
     "nvim-telescope/telescope.nvim",
-    requires = { {"nvim-lua/plenary.nvim"} }
+    requires = { { "nvim-lua/plenary.nvim" } }
   }
   use { "nvim-telescope/telescope-file-browser.nvim" }
   use { "nvim-telescope/telescope-fzy-native.nvim" }
   use {
     "ur4ltz/surround.nvim",
     config = function()
-      require"surround".setup {mappings_style = "surround"}
+      require "surround".setup { mappings_style = "surround" }
     end
   }
   use("ThePrimeagen/git-worktree.nvim")
   use("othree/html5.vim")
   use("pangloss/vim-javascript")
-  use{
+  use {
     "evanleck/vim-svelte",
     branch = "main"
   }
@@ -43,20 +42,41 @@ return require("packer").startup(function()
   use { "catppuccin/nvim", as = "catppuccin" }
   use { "sindrets/diffview.nvim", requires = "nvim-lua/plenary.nvim" }
   use {
-   "nvim-lualine/lualine.nvim",
-   requires = { "kyazdani42/nvim-web-devicons", opt = true }
+    "nvim-lualine/lualine.nvim",
+    requires = { "kyazdani42/nvim-web-devicons", opt = true }
   }
   use {
     'lewis6991/spellsitter.nvim',
-     config = function()
-     require('spellsitter').setup{
-       enable = true
-     }
-   end
+    config = function()
+      require('spellsitter').setup {
+        enable = true
+      }
+    end
   }
   use("windwp/nvim-ts-autotag")
   use {
-	"windwp/nvim-autopairs",
+    "windwp/nvim-autopairs",
     config = function() require("nvim-autopairs").setup {} end
-}
+  }
+  use {
+    'VonHeikemen/lsp-zero.nvim',
+    requires = {
+      -- LSP Support
+      { 'neovim/nvim-lspconfig' },
+      { 'williamboman/mason.nvim' },
+      { 'williamboman/mason-lspconfig.nvim' },
+
+      -- Autocompletion
+      { 'hrsh7th/nvim-cmp' },
+      { 'hrsh7th/cmp-buffer' },
+      { 'hrsh7th/cmp-path' },
+      { 'saadparwaiz1/cmp_luasnip' },
+      { 'hrsh7th/cmp-nvim-lsp' },
+      { 'hrsh7th/cmp-nvim-lua' },
+
+      -- Snippets
+      { 'L3MON4D3/LuaSnip' },
+      { 'rafamadriz/friendly-snippets' },
+    }
+  }
 end)
